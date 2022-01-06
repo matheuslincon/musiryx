@@ -1,12 +1,12 @@
 module.exports = {
     mode: 'jit',
-   // These paths are just examples, customize them to match your project structure
-    purge: [
-      './public/**/*.html',
-      './src/**/*.{js,jsx,ts,tsx,vue}',
-    ],
+    purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+    darkMode: false,
     theme: {
-      // ...
-    }
-    // ...
+      extends:{},
+    },
+    variants: {
+      extends:{},
+    },
+    plugins:[],
   }
