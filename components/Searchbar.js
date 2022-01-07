@@ -9,6 +9,13 @@ function Searchbar({ search, setSearch }) {
         onChange={(e) => setSearch(e.target.value)}
         className="bg-[#1a1a1a] text-white border-none lg:w-full focus:ring-0 outline-none placeholder-[#fafafa]"
         />
+        <div className="flex items-center">
+          <div className="flex space-x-2 pr-5">
+            <button className="tag">Rock</button>
+            <button className="tag">Jazz</button>
+            <button className="tag">Pop</button>
+          </div>
+        </div>
     </div>
   )
 }
