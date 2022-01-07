@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Musiryx - Dashboard</title>
         <meta name="Musiryx" content="Music App inspired on Spotify" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
       <Dashboard/>
     </div>
