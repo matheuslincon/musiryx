@@ -1,13 +1,25 @@
 import { getProviders, useSession, signIn } from 'next-auth/react';
 import Head from 'next/head';
 import Image from "next/image";
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import LoginImg from '../../public/login.svg';
+import Loader from "../../components/Loader";
 
 function Login({ providers }) {
   const { data: session } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if(session) {
+      router.push("/");
+    }
+  },[session]);
+
+  if(session) return <Loader/>
 
   return (
-    <div>
+    <div className="bg-black h-screen flex flex-col items-center pt-40 space-y-8">
       <Head>
         <title>Musiryx - Login</title>
         <meta name="Musiryx" content="Music App inspired on Spotify" />
