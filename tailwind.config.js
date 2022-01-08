@@ -21,10 +21,10 @@ module.exports = {
           pulse: "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         },
       },
-    },
-    fontFamily: {
-      body: ["Andada Pro", "serif"],
-      sans: ["ui-sans-serif", "system-ui"],
+      fontFamily: {
+        body: ["Andada Pro", "serif"],
+        sans: ["ui-sans-serif", "system-ui"],
+      },
     },
     variants: {
       extends:{},
