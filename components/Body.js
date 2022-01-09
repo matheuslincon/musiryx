@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import Searchbar from './Searchbar';
-import Poster from '../components/Poster';
+import Poster from './Poster';
+import Track from "./Track";
 
 function Body({ spotifyApi, chooseTrack }) {
   const { data: session } = useSession();
@@ -92,6 +93,34 @@ function Body({ spotifyApi, chooseTrack }) {
           <button className="btn">
             All Genres
           </button>
+        </div>
+
+        {/* New Releases */}
+        <div className="w-full pr-11">
+          <h2 className="text-white font-bold mb-3">
+            {searchResults.length === 0 ? "New Releases" : "Tracks"}
+          </h2>
+          <div className="space-y-3 border-2 border-[#262626] rounded-2xl p-3 bg-[#0D0D0D] overflow-y-scroll h-[1000px] md:h-96 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-thumb-rounded hover:scrollbar-thumb-gray-500 w-[830px]">
+            {searchResults.length === 0
+              ? newReleases
+                  .slice(4, newReleases.length)
+                  .map((track) => (
+                    <Track
+                      key={track.id}
+                      track={track}
+                      chooseTrack={chooseTrack}
+                    />
+                  ))
+              : searchResults
+                  .slice(4, searchResults.length)
+                  .map((track) => (
+                    <Track
+                      key={track.id}
+                      track={track}
+                      chooseTrack={chooseTrack}
+                    />
+                  ))}
+          </div>
         </div>
       </div>
     </section>
