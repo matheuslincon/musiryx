@@ -14,7 +14,7 @@ function Login({ providers }) {
     if(session) {
       router.push("/");
     }
-  },[session]);
+  },[router, session]);
 
   if(session) return <Loader/>
 
