@@ -19,10 +19,10 @@ function Dashboard() {
   };
 
   return (
-    <main className="flex min-h-screen min-w-max bg-black lg:pb-24">
+    <main className="flex min-h-screen bg-black lg:pb-24">
       <Leftbar/>
       <Body spotifyApi={spotifyApi} chooseTrack={chooseTrack}/>
-      <Rightbar/>
+      <Rightbar spotifyApi={spotifyApi} chooseTrack={chooseTrack}/>
     </main>
   )
 }
