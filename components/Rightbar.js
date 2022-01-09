@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import RecentlyPlayed from "./RecentlyPlayed";
 
-function Right({ chooseTrack, spotifyApi }) {
+function Rightbar({ chooseTrack, spotifyApi }) {
   const { data: session } = useSession();
   const accessToken = session?.accessToken;
   const [recentlyPlayed, setRecentlyPlayed] = useState([]);
@@ -68,4 +68,4 @@ function Right({ chooseTrack, spotifyApi }) {
   );
 }
 
-export default Right;
+export default Rightbar;
