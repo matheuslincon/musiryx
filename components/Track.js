@@ -44,14 +44,14 @@ function Track({ track, chooseTrack }) {
         <div className="flex items-center rounded-full border-2 border-[#262626] w-[85px] h-10 relative cursor-pointer group-hover:border-white/40">
           <AiFillHeart
             className={`text-xl ml-3 icon ${
-              hasLiked ? "text-[#1ED760]" : "text-[#868686]"
+              hasLiked ? "text-[#5d00b9]" : "text-[#868686]"
             }`}
             onClick={() => setHasLiked(!hasLiked)}
           />
           {track.uri === playingTrack.uri && play ? (
             <>
               <div
-                className="h-10 w-10 rounded-full border border-[#15883e] flex items-center justify-center absolute -right-0.5 bg-[#15883e] icon hover:scale-110"
+                className="h-10 w-10 rounded-full border border-[#5d00b9] flex items-center justify-center absolute -right-0.5 bg-[#5d00b9] icon hover:scale-110"
                 onClick={handlePlay}
               >
                 <BsFillPauseFill className="text-white text-xl" />
@@ -60,7 +60,7 @@ function Track({ track, chooseTrack }) {
           ) : (
             <>
               <div
-                className="h-10 w-10 rounded-full border border-white/60 flex items-center justify-center absolute -right-0.5 hover:bg-[#15883e] hover:border-[#15883e] icon hover:scale-110"
+                className="h-10 w-10 rounded-full border border-white/60 flex items-center justify-center absolute -right-0.5 hover:bg-[#5d00b9] hover:border-[#5d00b9] icon hover:scale-110"
                 onClick={handlePlay}
               >
                 <BsFillPlayFill className="text-white text-xl ml-[1px]" />
