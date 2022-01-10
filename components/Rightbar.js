@@ -29,7 +29,7 @@ function Rightbar({ chooseTrack, spotifyApi }) {
         })
       );
     });
-  }, [accessToken]);
+  }, [spotifyApi, accessToken]);
 
   return (
     <section className="p-4 space-y-8 pr-8">
@@ -60,7 +60,7 @@ function Rightbar({ chooseTrack, spotifyApi }) {
             />
           ))}
         </div>
-        <button className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out">
+        <button className="btn">
           View All
         </button>
       </div>
